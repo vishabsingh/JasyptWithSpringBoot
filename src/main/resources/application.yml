@@ -3,11 +3,25 @@ spring:
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
     username: root
-    password: ENC(S6ubHPds3CJKk7vAG4knp8sPF0QSTd65FVVgl4v/3Uo=)
+    #password: ENC(S6ubHPds3CJKk7vAG4knp8sPF0QSTd65FVVgl4v/3Uo=)
+    password: root
 
 server:
   port: 9090
 
 jasypt:
   encryptor:
-    password: localPassword
+    password: ${APP_KEYSTORE_ENCRYPTOR_PASSWORD:localPassword}
+    algorithm: ${APP_KEYSTORE_ENCRYPTOR_ALGORITHM:PBEWITHSHAAND256BITAES-CBC-BC}
+    provider-name: ${APP_KEYSTORE_ENCRYPTOR_PROVIDER:BC}}
+    bean: jasyptStringEncryptor
+
+
+app:
+  security:
+    dataEncryptionEnabled: true
+
+encrypted:
+  property: JAIDEV #ENC(S6ubHPds3CJKk7vAG4knp8sPF0QSTd65FVVgl4v/3Uo=)
+
+
