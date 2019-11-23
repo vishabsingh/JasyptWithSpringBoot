@@ -21,7 +21,7 @@ public class JasyptWithSpringBootApplicationPropertyValue implements CommandLine
 	private MyProperties myProperties;
 
 	// form Vm Arguments
-	@Value("${test.value}")
+	//@Value("${test.value}")
 	private String envValue;
 
 	@Autowired
