@@ -1,19 +1,19 @@
-#spring:
-#  datasource:
-#    url: jdbc:h2:mem:testdb
-#    driverClassName: org.h2.Driver
-#    username: root
-#    #password: ENC(S6ubHPds3CJKk7vAG4knp8sPF0QSTd65FVVgl4v/3Uo=)
-#    password: root
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: root
+    #password: ENC(+UVRlay47cQ8h4HDBhhlwrHcLi0xklHs4CFMRxJwtJE=)
+    password: root
 
 server:
   port: 9090
 
 jasypt:
   encryptor:
-    password: ${APP_KEYSTORE_ENCRYPTOR_PASSWORD:localPassword}
+    password: ${APP_KEYSTORE_ENCRYPTOR_PASSWORD:localDev}
     algorithm: ${APP_KEYSTORE_ENCRYPTOR_ALGORITHM:PBEWITHSHAAND256BITAES-CBC-BC}
-    provider-name: ${APP_KEYSTORE_ENCRYPTOR_PROVIDER:BC}}
+    provider-name: ${APP_KEYSTORE_ENCRYPTOR_PROVIDER:BC}
     bean: jasyptStringEncryptor
 
 
@@ -21,7 +21,8 @@ app:
   security:
     dataEncryptionEnabled: true
 
+
 encrypted:
-  property: JAIDEV #ENC(S6ubHPds3CJKk7vAG4knp8sPF0QSTd65FVVgl4v/3Uo=)
+  property: ENC(+UVRlay47cQ8h4HDBhhlwrHcLi0xklHs4CFMRxJwtJE=)
 
 

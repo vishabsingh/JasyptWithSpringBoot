@@ -15,6 +15,7 @@ import org.springframework.context.annotation.PropertySource;
 public class JasyptWithSpringBootApplication  {
 
 	public static void main(String[] args) {
+		// Override Properties
 		System.setProperty("APP_KEYSTORE_ENCRYPTOR_PASSWORD", "localPassword");
 		SpringApplication.run(JasyptWithSpringBootApplication.class, args);
 	}

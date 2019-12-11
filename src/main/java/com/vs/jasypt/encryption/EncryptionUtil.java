@@ -16,6 +16,7 @@ public class EncryptionUtil {
 	private StringEncryptor applicationDataEncryptor;
 
 	public EncryptionUtil(@Qualifier("jasyptStringEncryptor") StringEncryptor applicationDataEncryptor) {
+		System.out.println("=====applicationDataEncryptor=== EncryptionUtil===  " + applicationDataEncryptor);
 		this.applicationDataEncryptor = applicationDataEncryptor;
 	}
 

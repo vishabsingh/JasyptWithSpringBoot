@@ -25,12 +25,14 @@ public class EncryptionConfig {
 		Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
 	}
 
-	/*@Bean("jasyptStringEncryptor")
+	@Bean("jasyptStringEncryptor")
 	public StringEncryptor appDataEncrypted() {
 		PooledPBEStringEncryptor pooledPBEStringEncryptor = new PooledPBEStringEncryptor();
 		SimpleStringPBEConfig stringPBEConfig = new SimpleStringPBEConfig();
+		System.out.println("environment.getProperty(\"jasypt.encryptor.password\") = " + environment.getProperty("jasypt.encryptor.password"));
+		System.out.println("====ProvidedName  = " + environment.getProperty("jasypt.encryptor.provider-name"));
 		stringPBEConfig.setPassword(environment.getProperty("jasypt.encryptor.password"));
-		stringPBEConfig.setProviderName(environment.getProperty("jasypt.encryptor.providerName"));
+		stringPBEConfig.setProviderName(environment.getProperty("jasypt.encryptor.providername"));
 		stringPBEConfig.setAlgorithm(environment.getProperty("jasypt.encryptor.algorithm"));
 		stringPBEConfig.setPoolSize("1");
 		stringPBEConfig.setSaltGenerator(new RandomSaltGenerator());
@@ -38,9 +40,9 @@ public class EncryptionConfig {
 		stringPBEConfig.setKeyObtentionIterations("1000");
 		pooledPBEStringEncryptor.setConfig(stringPBEConfig);
 		return pooledPBEStringEncryptor;
-	}*/
+	}
 
-	@Bean
+	/*@Bean
 	public static EnvironmentStringPBEConfig environmentVariablesConfiguration() {
 		EnvironmentStringPBEConfig config = new EnvironmentStringPBEConfig();
 		config.setPasswordEnvName("APP_KEYSTORE_ENCRYPTOR_PASSWORD");
@@ -58,5 +60,5 @@ public class EncryptionConfig {
 		PooledPBEStringEncryptor encryptor = new PooledPBEStringEncryptor();
 		encryptor.setConfig(environmentVariablesConfiguration());
 		return encryptor;
-	}
+	}*/
 }

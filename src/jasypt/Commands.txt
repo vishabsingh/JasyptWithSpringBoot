@@ -1,0 +1,10 @@
+.\encrypt.bat algorithm=PBEWITHSHAAND256BITAES-CBC-BC providerName=BC providerClassName=org.bouncycastle.jce.provider.BouncyCastleProvider password=localPassword input=VISHABSINGH
+
+
+.\encrypt.bat algorithm=PBEWITHSHAAND256BITAES-CBC-BC providerName=BC providerClassName=org.bouncycastle.jce.provider.BouncyCastleProvider password=localDev input=root
+
+.\decrypt.bat algorithm=PBEWITHSHAAND256BITAES-CBC-BC providerName=BC providerClassName=org.bouncycastle.jce.provider.BouncyCastleProvider input=ukA4e1Q4cu/4WsoLv1+j1D0M3NJMIkFrJz2kmlS4GO8= password=localPassword
+
+.\decrypt.bat algorithm=PBEWITHSHAAND256BITAES-CBC-BC providerName=BC providerClassName=org.bouncycastle.jce.provider.BouncyCastleProvider input=S6ubHPds3CJKk7vAG4knp8sPF0QSTd65FVVgl4v/3Uo= password=localPassword
+
+
