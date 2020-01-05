@@ -2,4 +2,4 @@
 * [ulisesbocchio](https://github.com/ulisesbocchio/jasypt-spring-boot-samples)
 
 SPRING_DATASOURCE_PASSWORD=root
-APP_KEYSTORE_ENCRYPTOR_PASSWORD=localDev
+APP_KEYSTORE_ENCRYPTOR_PASSWORD=localMy
